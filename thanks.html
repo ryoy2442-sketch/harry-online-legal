@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HARRY ONLINE お支払い</title>
+<style>
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; line-height: 1.8; max-width: 760px; margin: 0 auto; padding: 48px 16px; color: #222; background: #fff; text-align: center; }
+a { color: #c0405a; }
+.big { font-size: 1.4em; font-weight: bold; margin: 16px 0; }
+@media (prefers-color-scheme: dark) { body { color: #eee; background: #15131c; } a { color: #ff8fa8; } }
+</style></head><body>
+<h1>HARRY ONLINE</h1>
+<p class="big" id="msg">お支払いが終わりました</p>
+<p id="sub">ゲームに戻って、ショップの「受け取る」を押してください。</p>
+<p>このページは閉じてかまいません。</p>
+<p><a href="support.html">サポート・お問い合わせ</a></p>
+<script>
+var q = location.search;
+if (q.indexOf('cancel=1') >= 0) { document.getElementById('msg').textContent = 'お支払いをやめました'; document.getElementById('sub').textContent = 'お金はかかっていません。ゲームに戻ってください。'; }
+if (q.indexOf('portal=1') >= 0) { document.getElementById('msg').textContent = 'お支払いの管理を閉じました'; document.getElementById('sub').textContent = 'ゲームに戻ってください。'; }
+</script>
+</body></html>

@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HARRY ONLINE 公式サイト</title>
+<meta name="description" content="ふたつの姿を持つ冒険者になって、仲間とギルドで大地を旅しよう。自分の手で戦う見下ろし型オンラインRPG『HARRY ONLINE』。iPhone 版・Windows 版 12月25日同時配信。">
+<meta property="og:title" content="HARRY ONLINE 公式サイト">
+<meta property="og:description" content="ふたつの姿を持つ冒険者になって、仲間とギルドで大地を旅しよう。iPhone 版・Windows 版 12月25日同時配信。">
+<meta property="og:image" content="https://ryoy2442-sketch.github.io/harry-online-legal/img/keyart.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #fff7ea; --muted: #d9cdb8; --gold: #f2c35a; --gold2: #ffdf8a; --rose: #c0405a;
+  --night: #120e1c; --panel: rgba(24, 18, 38, .78); --line: rgba(242, 195, 90, .35);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--night); color: var(--ink); font-family: "Zen Maru Gothic", -apple-system, "Hiragino Sans", sans-serif; line-height: 1.8; overflow-x: hidden; }
+a { color: var(--gold2); }
+img { max-width: 100%; display: block; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+/* ---------- 一番上 ---------- */
+.hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 48px 16px 64px; overflow: hidden; }
+.hero::before { content: ""; position: absolute; inset: -4%; background: url(img/keyart.jpg) 72% 30% / cover no-repeat; animation: drift 30s ease-in-out infinite alternate; z-index: -2; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18,14,28,.35) 0%, rgba(18,14,28,.15) 35%, rgba(18,14,28,.75) 78%, var(--night) 100%); z-index: -1; }
+@keyframes drift { from { transform: scale(1.02) translateY(0); } to { transform: scale(1.08) translateY(-1.5%); } }
+.logo { width: min(560px, 86vw); filter: drop-shadow(0 8px 24px rgba(0,0,0,.6)); animation: rise 1.2s ease-out both; }
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+.catch { margin: 18px 0 6px; font-size: clamp(22px, 4.6vw, 38px); font-weight: 900; letter-spacing: .04em; text-shadow: 0 3px 12px rgba(0,0,0,.7); animation: rise 1.2s .2s ease-out both; }
+.sub { margin: 0; color: var(--muted); font-size: clamp(14px, 2.6vw, 18px); text-shadow: 0 2px 8px rgba(0,0,0,.8); animation: rise 1.2s .35s ease-out both; }
+.date { display: inline-block; margin: 22px 0 18px; padding: 6px 18px; border: 1px solid var(--line); border-radius: 999px; background: rgba(18,14,28,.55); color: var(--gold2); font-weight: 700; animation: rise 1.2s .5s ease-out both; }
+.buttons { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; animation: rise 1.2s .65s ease-out both; }
+.btn { display: inline-flex; align-items: center; gap: 12px; min-width: 230px; padding: 12px 22px; border-radius: 14px; text-decoration: none; color: #fff; font-weight: 700; transition: transform .15s, box-shadow .15s; }
+.btn:hover { transform: translateY(-2px); }
+.btn small { display: block; font-size: 11px; font-weight: 500; opacity: .85; line-height: 1.2; }
+.btn b { display: block; font-size: 19px; line-height: 1.3; }
+.btn.apple { background: #000; border: 1px solid rgba(255,255,255,.25); box-shadow: 0 6px 18px rgba(0,0,0,.5); }
+.btn.win { background: linear-gradient(135deg, #c0405a, #8d2a52); border: 1px solid rgba(255,220,180,.35); box-shadow: 0 6px 18px rgba(192,64,90,.45); }
+.btn svg { width: 28px; height: 28px; flex: none; }
+.scroll { position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); color: var(--muted); font-size: 12px; letter-spacing: .2em; animation: bob 2s ease-in-out infinite; }
+@keyframes bob { 50% { transform: translate(-50%, 6px); } }
+
+/* ---------- 見出し ---------- */
+section { padding: 72px 0; }
+.title { text-align: center; margin: 0 0 36px; }
+.title .en { display: block; font-family: "Cinzel", serif; color: var(--gold); letter-spacing: .25em; font-size: 14px; }
+.title h2 { margin: 4px 0 0; font-size: clamp(24px, 4vw, 32px); font-weight: 900; }
+.title h2::after { content: ""; display: block; width: 64px; height: 3px; margin: 12px auto 0; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+
+/* ---------- 特徴 ---------- */
+.features { display: grid; gap: 28px; }
+.feature { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: center; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+.feature:nth-child(even) { grid-template-columns: 1fr 1.2fr; }
+.feature:nth-child(even) .shot { order: 2; }
+.shot { border-radius: 12px; overflow: hidden; box-shadow: 0 10px 28px rgba(0,0,0,.5); }
+.feature h3 { margin: 0 0 8px; font-size: 22px; color: var(--gold2); }
+.feature p { margin: 0; color: var(--muted); }
+.num { font-family: "Cinzel", serif; color: var(--gold); font-size: 13px; letter-spacing: .2em; }
+
+/* ---------- 職業 ---------- */
+.classes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.class { position: relative; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 18px 12px 16px; text-align: center; overflow: hidden; }
+.class::before { content: ""; position: absolute; inset: auto 0 0; height: 55%; background: radial-gradient(ellipse at 50% 100%, rgba(242,195,90,.18), transparent 70%); }
+.pair { position: relative; display: flex; justify-content: center; align-items: flex-end; gap: 6px; height: 170px; }
+.pair img { height: 150px; width: auto; transition: transform .3s; filter: drop-shadow(0 6px 8px rgba(0,0,0,.5)); }
+.pair img:last-child { height: 140px; opacity: .92; }
+.class:hover .pair img:first-child { transform: translateY(-6px); }
+.class h3 { position: relative; margin: 8px 0 0; font-size: 20px; }
+.role { position: relative; margin: 0; color: var(--gold2); font-size: 13px; }
+.forms { position: relative; margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+
+/* ---------- お知らせ・コミュニティ ---------- */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.card { display: block; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px; text-decoration: none; color: var(--ink); transition: transform .15s, border-color .15s; }
+.card:hover { transform: translateY(-2px); border-color: var(--gold); }
+.card b { display: block; font-size: 18px; color: var(--gold2); }
+.card span { color: var(--muted); font-size: 14px; }
+
+.btn.soon { opacity: .8; cursor: default; pointer-events: none; }
+/* ---------- PV ---------- */
+#pv { padding-bottom: 24px; }
+.pv { max-width: 960px; margin: 0 auto; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); background: #000; box-shadow: 0 12px 40px rgba(0,0,0,.35); }
+.pv video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+/* ---------- 予約人数のごほうび ---------- */
+.camp { max-width: 760px; margin: 0 auto; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 24px 20px; text-align: center; }
+.camp-lead { margin: 0 0 18px; color: var(--muted); }
+.camp-lead b, .camp-note b { color: var(--gold2); }
+.meter { height: 16px; border-radius: 999px; background: rgba(255,255,255,.08); border: 1px solid var(--line); overflow: hidden; }
+.meter-bar { height: 100%; width: 0; background: linear-gradient(90deg, #c0405a, var(--gold)); border-radius: 999px; transition: width 1.6s ease-out; }
+.camp-count { margin: 10px 0 18px; font-weight: 900; font-size: 20px; color: var(--gold2); }
+.tiers { list-style: none; margin: 0 0 18px; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.tiers li { border: 1px solid var(--line); border-radius: 12px; padding: 10px 6px; background: rgba(0,0,0,.2); }
+.tiers li.got { border-color: var(--gold); box-shadow: 0 0 14px rgba(242,195,90,.35); }
+.tiers li.got .n::after { content: " 達成！"; color: var(--gold); }
+.tiers .n { display: block; font-weight: 900; }
+.tiers .r { display: block; font-size: 13px; color: var(--muted); line-height: 1.5; }
+.camp-note { margin: 0 0 18px; font-size: 14px; color: var(--muted); }
+.camp-btn { margin: 0 auto; }
+
+/* ---------- 一番下 ---------- */
+footer { border-top: 1px solid var(--line); padding: 40px 0 56px; text-align: center; color: var(--muted); font-size: 14px; background: linear-gradient(180deg, transparent, rgba(0,0,0,.35)); }
+footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; margin-bottom: 18px; }
+.other { display: inline-flex; align-items: center; gap: 10px; margin: 6px 0 22px; padding: 10px 18px; border: 1px solid var(--line); border-radius: 12px; text-decoration: none; color: var(--ink); }
+.other:hover { border-color: var(--gold); }
+
+/* 出てくる動き */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.show { opacity: 1; transform: none; }
+
+@media (max-width: 760px) {
+  /* スマホ: コマンダーの顔が上に見えるように、絵を上に寄せて文字を下に寄せる */
+  .hero { justify-content: flex-end; }
+  .hero::before { background-size: 260% auto; background-position: 74% 0; background-color: var(--night); }
+  .feature, .feature:nth-child(even) { grid-template-columns: 1fr; }
+  .feature:nth-child(even) .shot { order: 0; }
+  .classes { grid-template-columns: repeat(2, 1fr); }
+  .tiers { grid-template-columns: repeat(2, 1fr); }
+  .pair { height: 130px; } .pair img { height: 115px; } .pair img:last-child { height: 105px; }
+  .btn { min-width: 0; width: 100%; max-width: 320px; }
+}
+@media (prefers-reduced-motion: reduce) { .hero::before, .scroll, .logo, .catch, .sub, .date, .buttons { animation: none; } .reveal { opacity: 1; transform: none; transition: none; } }
+</style></head><body>
+
+<header class="hero">
+  <h1 style="margin:0"><img class="logo" src="img/logo.png" alt="HARRY ONLINE"></h1>
+  <p class="catch">ふたつの姿で、仲間と旅する。</p>
+  <p class="sub">自分の手で戦う、見下ろし型のオンライン RPG</p>
+  <div class="date"><span style="white-space:nowrap">2026年12月25日</span> <span style="white-space:nowrap">iPhone・Windows 同時配信</span></div>
+  <div class="buttons">
+    <a class="btn apple soon" aria-disabled="true">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.4.8c1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.8 4.9c.7-.9 1.2-2.1 1.1-3.3-1 0-2.3.7-3 1.6-.7.8-1.3 2-1.1 3.2 1.1.1 2.3-.6 3-1.5z"/></svg>
+      <span><small>12月25日配信・近日予約開始</small><b>App Store</b></span>
+    </a>
+    <a class="btn win" href="windows.html">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3v-6zm8.5-1.2L21 3v8.5h-9.5V4.3zM3 12.5h7.5v7L3 18.5v-6zm8.5 0H21V21l-9.5-1.3v-7.2z"/></svg>
+      <span><small>12月25日配信・無料</small><b>Windows 版</b></span>
+    </a>
+  </div>
+  <div class="scroll">SCROLL ▼</div>
+</header>
+
+<main>
+<section id="pv">
+  <div class="wrap">
+    <div class="title reveal"><span class="en">MOVIE</span><h2>プロモーション映像</h2></div>
+    <div class="pv reveal"><video src="video/pv.mp4" poster="img/pv_poster.jpg" controls playsinline preload="none"></video></div>
+  </div>
+</section>
+
+<section id="campaign">
+  <div class="wrap">
+    <div class="title reveal"><span class="en">PRE-REGISTRATION</span><h2>予約人数で、ごほうびが増える！</h2></div>
+    <div class="camp reveal">
+      <p class="camp-lead">App Store の予約の人数に合わせて、配信のときに<b>全員</b>へごほうびを配ります。</p>
+      <div class="meter"><div class="meter-bar" id="meterBar"></div></div>
+      <p class="camp-count" id="campCount">近日予約開始</p>
+      <ol class="tiers" id="tiers">
+        <li data-n="1000"><span class="n">1,000人</span><span class="r">銀の装備箱 ×3</span></li>
+        <li data-n="3000"><span class="n">3,000人</span><span class="r">金の装備箱 ×1</span></li>
+        <li data-n="5000"><span class="n">5,000人</span><span class="r">限定の染め色</span></li>
+        <li data-n="10000"><span class="n">10,000人</span><span class="r">コマンダーの限定の旗の見た目</span></li>
+      </ol>
+      <p class="camp-note">さらに、配信から2週間（2027年1月8日まで）に遊んだ人全員に、限定の称号<b>《はじまりの冒険者》</b>をプレゼント。</p>
+      <a class="btn apple camp-btn soon" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.4.8c1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.8 4.9c.7-.9 1.2-2.1 1.1-3.3-1 0-2.3.7-3 1.6-.7.8-1.3 2-1.1 3.2 1.1.1 2.3-.6 3-1.5z"/></svg><span><small>12月25日配信</small><b>App Store で近日予約開始</b></span></a>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="title reveal"><span class="en">FEATURES</span><h2>ゲームの特徴</h2></div>
+    <div class="features">
+      <article class="feature reveal">
+        <div class="shot"><img src="img/shot_1_boss.jpg" alt="Lv100 のファイアメイジが遺跡の守り神と戦う画面" loading="lazy"></div>
+        <div><span class="num">01</span><h3>ふたつの姿で戦う</h3><p>どの職業も、ボタンひとつで二つの姿を切り替えられます。剣で斬りこむソードマンから、炎で群れを焼くファイアメイジへ。戦い方は自分しだい。</p></div>
+      </article>
+      <article class="feature reveal">
+        <div class="shot"><img src="img/shot_3_skills.jpg" alt="スキルを選ぶ画面" loading="lazy"></div>
+        <div><span class="num">02</span><h3>自分の手で戦うアクション</h3><p>オートで勝手に進むゲームではありません。スティックで動き、攻撃とスキルを自分で押して戦います。敵の大技の「予告の円」を見てよけるのが勝負のカギ。</p></div>
+      </article>
+      <article class="feature reveal">
+        <div class="shot"><img src="img/shot_4_items.jpg" alt="装備と持ち物の画面" loading="lazy"></div>
+        <div><span class="num">03</span><h3>拾って、鍛えて、強くなる</h3><p>敵が落とす装備には、ランダムなオプションが付きます。鍛冶屋で +10 まで強化。めったに出ない伝説の装備も。モンスター図鑑と称号集めも。</p></div>
+      </article>
+      <article class="feature reveal">
+        <div class="shot"><img src="img/hero.jpg" alt="港町を見下ろす冒険者たち" loading="lazy"></div>
+        <div><span class="num">04</span><h3>仲間と、ギルドで</h3><p>8人までのパーティで回復役・守り役・攻め役が力を合わせ、ギルドで砦を守り、ギルド同士の攻城戦へ。iPhone と Windows で、同じ世界・同じキャラで遊べます。</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="classes">
+  <div class="wrap">
+    <div class="title reveal"><span class="en">CLASSES</span><h2>6つの職業・12の姿</h2></div>
+    <div class="classes">
+      <div class="class reveal"><div class="pair"><img src="img/fighter_0.png" alt="ソードマン" loading="lazy"><img src="img/fighter_1.png" alt="ファイアメイジ" loading="lazy"></div><h3>ファイター</h3><p class="role">攻撃・敵を倒す</p><p class="forms">ソードマン ⇔ ファイアメイジ</p></div>
+      <div class="class reveal"><div class="pair"><img src="img/knight_0.png" alt="シールドナイト" loading="lazy"><img src="img/knight_1.png" alt="ベアナイト" loading="lazy"></div><h3>ナイト</h3><p class="role">タンク・仲間を守る</p><p class="forms">シールドナイト ⇔ ベアナイト</p></div>
+      <div class="class reveal"><div class="pair"><img src="img/priest_0.png" alt="シスター" loading="lazy"><img src="img/priest_1.png" alt="エンジェルアーチャー" loading="lazy"></div><h3>プリースト</h3><p class="role">回復・仲間を支える</p><p class="forms">シスター ⇔ エンジェルアーチャー</p></div>
+      <div class="class reveal"><div class="pair"><img src="img/bard_0.png" alt="シンガー" loading="lazy"><img src="img/bard_1.png" alt="ダンサー" loading="lazy"></div><h3>バード</h3><p class="role">バフ・仲間を強くする</p><p class="forms">シンガー ⇔ ダンサー</p></div>
+      <div class="class reveal"><div class="pair"><img src="img/witch_0.png" alt="カースウィッチ" loading="lazy"><img src="img/witch_1.png" alt="シャドウ" loading="lazy"></div><h3>ウィッチ</h3><p class="role">デバフ・敵を弱くする</p><p class="forms">カースウィッチ ⇔ シャドウ</p></div>
+      <div class="class reveal"><div class="pair"><img src="img/commander_0.png" alt="軍師" loading="lazy"><img src="img/commander_1.png" alt="旗手" loading="lazy"></div><h3>コマンダー</h3><p class="role">指揮・ギルド戦の要</p><p class="forms">軍師 ⇔ 旗手</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="links">
+  <div class="wrap">
+    <div class="title reveal"><span class="en">INFORMATION</span><h2>お知らせ・サポート</h2></div>
+    <div class="cards reveal">
+      <a class="card" href="windows.html"><b>Windows 版（12月25日配信）</b><span>動く PC の目安・キー操作・引き継ぎのやり方</span></a>
+      <a class="card" href="support.html"><b>サポート・お問い合わせ</b><span>不具合や迷惑な行いのご報告はメールで</span></a>
+      <a class="card" href="mailto:info@koumane-game.com"><b>メール</b><span>info@koumane-game.com</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="margin:0 0 6px">ハリーのほかのゲーム</p>
+    <a class="other" href="https://koumane-game.com/" target="_blank" rel="noopener">⚾ 高校野球マネジメント（監督じゃない。部長だ。）</a>
+    <nav>
+      <a href="support.html">サポート</a>
+      <a href="terms.html">利用規約</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="windows.html">Windows 版</a>
+    </nav>
+    <div>お問い合わせ: <a href="mailto:info@koumane-game.com">info@koumane-game.com</a></div>
+    <div style="margin-top:10px">© 2026 ハリー</div>
+  </div>
+</footer>
+
+<script>
+// 画面に入ったらふわっと出す
+var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (es) {
+  es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+}, { threshold: .15 }) : null;
+document.querySelectorAll('.reveal').forEach(function (el) { io ? io.observe(el) : el.classList.add('show'); });
+
+// 予約の人数（App Store Connect の予約数。ハリーに聞いて、ここの数を書きかえる。0 のときは人数を出さない）
+var PREORDERS = 0;
+(function () {
+  var tiers = document.querySelectorAll('#tiers li'), max = 10000, next = null;
+  tiers.forEach(function (li) { var n = +li.dataset.n; if (PREORDERS >= n) li.classList.add('got'); else if (!next) next = n; });
+  if (PREORDERS > 0) {
+    document.getElementById('campCount').textContent = '現在 ' + PREORDERS.toLocaleString() + ' 人' + (next ? '（次のごほうびまで あと ' + (next - PREORDERS).toLocaleString() + ' 人）' : '　全部達成！');
+    setTimeout(function () { document.getElementById('meterBar').style.width = Math.min(100, PREORDERS / max * 100) + '%'; }, 300);
+  }
+})();
+</script>
+</body></html>
