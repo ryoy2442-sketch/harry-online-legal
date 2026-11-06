@@ -69,10 +69,28 @@ section { padding: 72px 0; }
 .pair img { height: 150px; width: auto; transition: transform .3s; filter: drop-shadow(0 6px 8px rgba(0,0,0,.5)); }
 .pair img:last-child { height: 140px; opacity: .92; }
 .class:hover .pair img:first-child { transform: translateY(-6px); }
-.class h3 { position: relative; margin: 8px 0 0; font-size: 20px; }
+.class h3 { position: relative; margin: 8px 0 0; font-size: 17px; line-height: 1.5; }
 .role { position: relative; margin: 0; color: var(--gold2); font-size: 13px; }
 .forms { position: relative; margin: 6px 0 0; color: var(--muted); font-size: 13px; }
 
+/* ---------- 着せ替え ---------- */
+.av-lead { margin: 0 auto 24px; max-width: 720px; text-align: center; color: var(--muted); }
+.av-stats { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 760px; margin: 0 auto 32px; padding: 0; }
+.av-stats li { text-align: center; color: var(--muted); font-size: 13px; }
+.av-stats b { display: block; font-family: "Cinzel", serif; font-size: 34px; line-height: 1.2; color: var(--gold2); }
+.av-legend { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+.av-card { position: relative; margin: 0; padding: 16px 8px 12px; text-align: center; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.av-card::before { content: ""; position: absolute; inset: auto 0 0; height: 60%; background: radial-gradient(ellipse at 50% 100%, rgba(242,195,90,.22), transparent 70%); }
+.av-card img { position: relative; height: 170px; width: 100%; object-fit: contain; filter: drop-shadow(0 6px 8px rgba(0,0,0,.5)); transition: transform .3s; }
+.av-card:hover img { transform: translateY(-6px); }
+.av-card figcaption { position: relative; margin-top: 8px; font-size: 14px; font-weight: 700; line-height: 1.4; }
+.av-tag { display: block; color: var(--gold); font-size: 11px; letter-spacing: .15em; }
+.av-sub { margin: 14px 0 26px; text-align: center; color: var(--muted); font-size: 13px; }
+.av-all { display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; }
+.av-all img { width: 100%; height: 92px; object-fit: contain; filter: drop-shadow(0 3px 4px rgba(0,0,0,.5)); }
+.av-weapons { display: grid; grid-template-columns: repeat(12, 1fr); gap: 6px; margin-top: 30px; }
+.av-weapons img { width: 100%; height: 96px; object-fit: contain; filter: drop-shadow(0 3px 5px rgba(0,0,0,.6)); }
+.av-weapons + * { margin-top: 0; }
 /* ---------- お知らせ・コミュニティ ---------- */
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
 .card { display: block; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px; text-decoration: none; color: var(--ink); transition: transform .15s, border-color .15s; }
@@ -118,6 +136,10 @@ footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 1
   .feature, .feature:nth-child(even) { grid-template-columns: 1fr; }
   .feature:nth-child(even) .shot { order: 0; }
   .classes { grid-template-columns: repeat(2, 1fr); }
+  .av-legend { grid-template-columns: repeat(3, 1fr); gap: 10px; } .av-card img { height: 120px; } .av-card figcaption { font-size: 12px; }
+  .av-all { grid-template-columns: repeat(6, 1fr); } .av-all img { height: 74px; }
+  .av-weapons { grid-template-columns: repeat(6, 1fr); } .av-weapons img { height: 70px; }
+  .av-stats b { font-size: 26px; } .av-stats li { font-size: 11px; }
   .tiers { grid-template-columns: repeat(2, 1fr); }
   .pair { height: 130px; } .pair img { height: 115px; } .pair img:last-child { height: 105px; }
   .btn { min-width: 0; width: 100%; max-width: 320px; }
@@ -151,6 +173,24 @@ footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 1
   </div>
 </section>
 
+<section id="avatars">
+  <div class="wrap">
+    <div class="title reveal"><span class="en">AVATAR</span><h2>この姿は、お金では買えない。</h2></div>
+    <p class="av-lead reveal">衣装も、武器の見た目も、課金では手に入りません。<br>魔物を狩って拾い、露店で売り買いして、<span style="display:inline-block">自分だけの姿を作ろう。</span></p>
+    <ul class="av-stats reveal">
+      <li><b>30</b>全身の衣装</li>
+      <li><b>60</b>武器アバター</li>
+      <li><b>40+</b>頭と背中の飾り</li>
+      <li><b>12</b>髪の色</li>
+    </ul>
+    <div class="av-legend reveal"><figure class="av-card"><img src="img/avatar/c2.webp" alt="竜騎士の聖鎧" loading="lazy"><figcaption><span class="av-tag">伝説</span>竜騎士の聖鎧</figcaption></figure><figure class="av-card"><img src="img/avatar/c9.webp" alt="黄金獅子の鎧" loading="lazy"><figcaption><span class="av-tag">伝説</span>黄金獅子の鎧</figcaption></figure><figure class="av-card"><img src="img/avatar/c15.webp" alt="天空の聖衣" loading="lazy"><figcaption><span class="av-tag">伝説</span>天空の聖衣</figcaption></figure><figure class="av-card"><img src="img/avatar/c20.webp" alt="舞姫の羽衣" loading="lazy"><figcaption><span class="av-tag">伝説</span>舞姫の羽衣</figcaption></figure><figure class="av-card"><img src="img/avatar/c23.webp" alt="夜の女王" loading="lazy"><figcaption><span class="av-tag">伝説</span>夜の女王</figcaption></figure><figure class="av-card"><img src="img/avatar/c29.webp" alt="王国の大元帥" loading="lazy"><figcaption><span class="av-tag">伝説</span>王国の大元帥</figcaption></figure></div>
+    <p class="av-sub reveal">強敵とボスが、まれに落とす伝説の衣装</p>
+    <div class="av-all reveal"><img src="img/avatar/c0.webp" alt="剣道着" title="剣道着" loading="lazy"><img src="img/avatar/c1.webp" alt="海賊の船長服" title="海賊の船長服" loading="lazy"><img src="img/avatar/c3.webp" alt="星読みのローブ" title="星読みのローブ" loading="lazy"><img src="img/avatar/c4.webp" alt="夏祭りの浴衣" title="夏祭りの浴衣" loading="lazy"><img src="img/avatar/c5.webp" alt="紅蓮の魔導礼装" title="紅蓮の魔導礼装" loading="lazy"><img src="img/avatar/c6.webp" alt="近衛兵の礼装" title="近衛兵の礼装" loading="lazy"><img src="img/avatar/c7.webp" alt="雪国の毛皮よろい" title="雪国の毛皮よろい" loading="lazy"><img src="img/avatar/c8.webp" alt="山賊の頭領" title="山賊の頭領" loading="lazy"><img src="img/avatar/c10.webp" alt="花の巫女装束" title="花の巫女装束" loading="lazy"><img src="img/avatar/c11.webp" alt="旅の薬師" title="旅の薬師" loading="lazy"><img src="img/avatar/c12.webp" alt="聖夜の礼拝服" title="聖夜の礼拝服" loading="lazy"><img src="img/avatar/c13.webp" alt="森の妖精の服" title="森の妖精の服" loading="lazy"><img src="img/avatar/c14.webp" alt="月光の狩人" title="月光の狩人" loading="lazy"><img src="img/avatar/c16.webp" alt="吟遊詩人の正装" title="吟遊詩人の正装" loading="lazy"><img src="img/avatar/c17.webp" alt="ステージ衣装" title="ステージ衣装" loading="lazy"><img src="img/avatar/c18.webp" alt="砂漠の踊り子" title="砂漠の踊り子" loading="lazy"><img src="img/avatar/c19.webp" alt="南国の花飾り" title="南国の花飾り" loading="lazy"><img src="img/avatar/c21.webp" alt="ゴシックドレス" title="ゴシックドレス" loading="lazy"><img src="img/avatar/c22.webp" alt="雨の日のレインコート" title="雨の日のレインコート" loading="lazy"><img src="img/avatar/c24.webp" alt="忍びの装束" title="忍びの装束" loading="lazy"><img src="img/avatar/c25.webp" alt="黒猫の怪盗" title="黒猫の怪盗" loading="lazy"><img src="img/avatar/c26.webp" alt="宮廷の書記官" title="宮廷の書記官" loading="lazy"><img src="img/avatar/c27.webp" alt="陣羽織の大将" title="陣羽織の大将" loading="lazy"><img src="img/avatar/c28.webp" alt="祭りのはっぴ" title="祭りのはっぴ" loading="lazy"></div>
+    <p class="av-sub reveal">武器アバター（見た目だけ。強さは変わりません）</p>
+    <div class="av-weapons reveal"><img src="img/avatar/s4.webp" alt="天翔ける聖剣" title="天翔ける聖剣" loading="lazy"><img src="img/avatar/s9.webp" alt="不死鳥の杖" title="不死鳥の杖" loading="lazy"><img src="img/avatar/s14.webp" alt="王者の宝剣" title="王者の宝剣" loading="lazy"><img src="img/avatar/s19.webp" alt="黄金竜の斧" title="黄金竜の斧" loading="lazy"><img src="img/avatar/s24.webp" alt="光輪の大杖" title="光輪の大杖" loading="lazy"><img src="img/avatar/s29.webp" alt="天空の弓" title="天空の弓" loading="lazy"><img src="img/avatar/s34.webp" alt="天上の竪琴" title="天上の竪琴" loading="lazy"><img src="img/avatar/s39.webp" alt="天女の扇" title="天女の扇" loading="lazy"><img src="img/avatar/s44.webp" alt="冥王の杖" title="冥王の杖" loading="lazy"><img src="img/avatar/s49.webp" alt="夜叉の短剣" title="夜叉の短剣" loading="lazy"><img src="img/avatar/s54.webp" alt="天下の軍配" title="天下の軍配" loading="lazy"><img src="img/avatar/s59.webp" alt="王国の聖旗" title="王国の聖旗" loading="lazy"></div>
+  </div>
+</section>
+
 <section id="campaign">
   <div class="wrap">
     <div class="title reveal"><span class="en">PRE-REGISTRATION</span><h2>予約人数で、ごほうびが増える！</h2></div>
@@ -162,7 +202,7 @@ footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 1
         <li data-n="1000"><span class="n">1,000人</span><span class="r">銀の装備箱 ×3</span></li>
         <li data-n="3000"><span class="n">3,000人</span><span class="r">金の装備箱 ×1</span></li>
         <li data-n="5000"><span class="n">5,000人</span><span class="r">限定の染め色</span></li>
-        <li data-n="10000"><span class="n">10,000人</span><span class="r">コマンダーの限定の旗の見た目</span></li>
+        <li data-n="10000"><span class="n">10,000人</span><span class="r">軍師・旗手の限定の旗の見た目</span></li>
       </ol>
       <p class="camp-note">さらに、配信から2週間（2027年1月8日まで）に遊んだ人全員に、限定の称号<b>《はじまりの冒険者》</b>をプレゼント。</p>
       <a class="btn apple camp-btn" href="https://apps.apple.com/jp/app/id6826486128"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.4.8c1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.8 4.9c.7-.9 1.2-2.1 1.1-3.3-1 0-2.3.7-3 1.6-.7.8-1.3 2-1.1 3.2 1.1.1 2.3-.6 3-1.5z"/></svg><span><small>12月25日配信</small><b>App Store で予約する</b></span></a>
@@ -187,7 +227,7 @@ footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 1
         <div><span class="num">03</span><h3>拾って、鍛えて、強くなる</h3><p>敵が落とす装備には、ランダムなオプションが付きます。鍛冶屋で +10 まで強化。めったに出ない伝説の装備も。モンスター図鑑と称号集めも。</p></div>
       </article>
       <article class="feature reveal">
-        <div class="shot"><img src="img/hero.jpg" alt="港町を見下ろす冒険者たち" loading="lazy"></div>
+        <div class="shot"><img src="img/shot_gvg.jpg" alt="ギルド戦でぶつかり合う冒険者たち" loading="lazy"></div>
         <div><span class="num">04</span><h3>仲間と、ギルドで</h3><p>8人までのパーティで回復役・守り役・攻め役が力を合わせ、ギルドで砦を守り、ギルド同士の攻城戦へ。iPhone と Windows で、同じ世界・同じキャラで遊べます。</p></div>
       </article>
     </div>
@@ -196,14 +236,14 @@ footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 1
 
 <section id="classes">
   <div class="wrap">
-    <div class="title reveal"><span class="en">CLASSES</span><h2>6つの職業・12の姿</h2></div>
+    <div class="title reveal"><span class="en">JOBS</span><h2>12のジョブ、ふたつの姿</h2></div>
     <div class="classes">
-      <div class="class reveal"><div class="pair"><img src="img/fighter_0.png" alt="ソードマン" loading="lazy"><img src="img/fighter_1.png" alt="ファイアメイジ" loading="lazy"></div><h3>ファイター</h3><p class="role">攻撃・敵を倒す</p><p class="forms">ソードマン ⇔ ファイアメイジ</p></div>
-      <div class="class reveal"><div class="pair"><img src="img/knight_0.png" alt="シールドナイト" loading="lazy"><img src="img/knight_1.png" alt="ベアナイト" loading="lazy"></div><h3>ナイト</h3><p class="role">タンク・仲間を守る</p><p class="forms">シールドナイト ⇔ ベアナイト</p></div>
-      <div class="class reveal"><div class="pair"><img src="img/priest_0.png" alt="シスター" loading="lazy"><img src="img/priest_1.png" alt="エンジェルアーチャー" loading="lazy"></div><h3>プリースト</h3><p class="role">回復・仲間を支える</p><p class="forms">シスター ⇔ エンジェルアーチャー</p></div>
-      <div class="class reveal"><div class="pair"><img src="img/bard_0.png" alt="シンガー" loading="lazy"><img src="img/bard_1.png" alt="ダンサー" loading="lazy"></div><h3>バード</h3><p class="role">バフ・仲間を強くする</p><p class="forms">シンガー ⇔ ダンサー</p></div>
-      <div class="class reveal"><div class="pair"><img src="img/witch_0.png" alt="カースウィッチ" loading="lazy"><img src="img/witch_1.png" alt="シャドウ" loading="lazy"></div><h3>ウィッチ</h3><p class="role">デバフ・敵を弱くする</p><p class="forms">カースウィッチ ⇔ シャドウ</p></div>
-      <div class="class reveal"><div class="pair"><img src="img/commander_0.png" alt="軍師" loading="lazy"><img src="img/commander_1.png" alt="旗手" loading="lazy"></div><h3>コマンダー</h3><p class="role">指揮・ギルド戦の要</p><p class="forms">軍師 ⇔ 旗手</p></div>
+      <div class="class reveal"><div class="pair"><img src="img/fighter_0.png" alt="ソードマン" loading="lazy"><img src="img/fighter_1.png" alt="ファイアメイジ" loading="lazy"></div><h3>ソードマン ⇔ ファイアメイジ</h3><p class="role">攻撃・敵を倒す</p></div>
+      <div class="class reveal"><div class="pair"><img src="img/knight_0.png" alt="シールドナイト" loading="lazy"><img src="img/knight_1.png" alt="ベアナイト" loading="lazy"></div><h3>シールドナイト ⇔ ベアナイト</h3><p class="role">タンク・仲間を守る</p></div>
+      <div class="class reveal"><div class="pair"><img src="img/priest_0.png" alt="シスター" loading="lazy"><img src="img/priest_1.png" alt="エンジェルアーチャー" loading="lazy"></div><h3>シスター ⇔ エンジェルアーチャー</h3><p class="role">回復・仲間を支える</p></div>
+      <div class="class reveal"><div class="pair"><img src="img/bard_0.png" alt="シンガー" loading="lazy"><img src="img/bard_1.png" alt="ダンサー" loading="lazy"></div><h3>シンガー ⇔ ダンサー</h3><p class="role">バフ・仲間を強くする</p></div>
+      <div class="class reveal"><div class="pair"><img src="img/witch_0.png" alt="カースウィッチ" loading="lazy"><img src="img/witch_1.png" alt="シャドウ" loading="lazy"></div><h3>カースウィッチ ⇔ シャドウ</h3><p class="role">デバフ・敵を弱くする</p></div>
+      <div class="class reveal"><div class="pair"><img src="img/commander_0.png" alt="軍師" loading="lazy"><img src="img/commander_1.png" alt="旗手" loading="lazy"></div><h3>軍師 ⇔ 旗手</h3><p class="role">指揮・ギルド戦の要</p></div>
     </div>
   </div>
 </section>
